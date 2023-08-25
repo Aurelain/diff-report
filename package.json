@@ -1,13 +1,18 @@
 {
-    "scripts": {
-        "build": "webpack --mode production"
+    "dependencies": {
+        "diff-match-patch": "^1.0.5"
     },
     "devDependencies": {
         "eslint": "^8.47.0",
         "html-webpack-plugin": "^5.5.3",
         "prettier": "^3.0.2",
+        "sendkeys-js": "^0.0.4",
         "webpack": "^5.88.2",
         "webpack-cli": "^5.1.4"
+    },
+    "scripts": {
+        "start": "node scripts/build",
+        "build": "node scripts/build"
     },
     "eslintConfig": {
         "rules": {
@@ -22,10 +27,6 @@
                 "single",
                 "avoid-escape"
             ]
-        },
-        "parserOptions": {
-            "sourceType": "module",
-            "ecmaVersion": "latest"
         }
     },
     "prettier": {
