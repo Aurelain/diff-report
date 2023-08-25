@@ -97,7 +97,7 @@ const onWikiButtonClick = (event) => {
     const {nr} = event.currentTarget.dataset;
     const index = Number(nr) - 1;
     const {title, text2} = data.list[index];
-    copyToClipboard(text2);
+    copyToClipboard(text2, {format: 'text/plain'});
     const src = data.wiki + '/' + title + '?action=edit';
     window.open(src, '_blank').focus();
     const row = event.currentTarget.closest('.row');
