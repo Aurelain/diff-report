@@ -1,8 +1,13 @@
 {
+    "scripts": {
+        "build": "webpack --mode production"
+    },
     "devDependencies": {
         "eslint": "^8.47.0",
+        "html-webpack-plugin": "^5.5.3",
         "prettier": "^3.0.2",
-        "webpack": "^5.88.2"
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
     },
     "eslintConfig": {
         "rules": {
