@@ -1,4 +1,14 @@
-import compareTexts from './system/compareTexts';
+import analyzeData from './system/analyzeData';
+import embedScriptFile from './utils/embedScriptFile';
 
-const result = compareTexts('foo', 'bor');
-console.log(result);
+/**
+ *
+ */
+const onWindowLoad = async () => {
+    if (!window.DATA) {
+        await embedScriptFile('data.js');
+    }
+    analyzeData(window.DATA);
+};
+
+window.addEventListener('load', onWindowLoad);

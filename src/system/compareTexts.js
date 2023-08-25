@@ -42,9 +42,14 @@ const compareTexts = (text1, text2) => {
         }
     }
 
+    const fresh1 = t1.join('').replaceAll('</del><ins></ins>', '</del>');
+    const fresh2 = t2.join('').replaceAll('<del></del><ins>', '<ins>');
+
+    const ltOccurrences = fresh2.split('<').length - 1;
     return {
-        text1: t1.join('').split('</del><ins></ins>').join('</del>'),
-        text2: t2.join('').split('<del></del><ins>').join('<ins>'),
+        text1: fresh1,
+        text2: fresh2,
+        differences: ltOccurrences / 2,
     };
 };
 
