@@ -8,13 +8,24 @@
             html {
                 font-family: Consolas, monospace;
             }
+
             html, body {
                 margin: 0;
                 padding: 0;
             }
+
             .row {
+                padding-bottom: 32px;
+            }
+
+            .collapsed {
                 padding-bottom: 1px;
             }
+
+            .collapsed .content {
+                display: none;
+            }
+
             .title {
                 font-size: 24px;
                 line-height: 24px;
@@ -22,66 +33,79 @@
                 background: #d6d6d6;
                 cursor: pointer;
             }
+
             .title:hover {
                 background: orange;
             }
+
             .changed {
                 background: #c2d8f2;
             }
-            .collapsed .comparison {
-                display: none;
-            }
+
             .differences {
-                float:right;
+                float: right;
                 font-size: 14px;
                 line-height: 24px;
             }
+
             .comparison {
-                display:flex;
-                padding-bottom: 32px;
+                display: flex;
             }
+
             .text {
                 padding: 4px;
                 flex-basis: 50%;
                 flex-grow: 0;
             }
+
+            button {
+                cursor: pointer;
+                padding: 8px;
+                width: 200px;
+                margin: auto;
+                display: block;
+            }
+
             del {
-               background: #f5a7a7;
-               text-decoration: none;
-               outline: solid 1px #f5a7a7;
+                background: #f5a7a7;
+                text-decoration: none;
+                outline: solid 1px #f5a7a7;
             }
+
             ins {
-               background: #BEE6BE;
-               text-decoration: none;
-               outline: solid 1px #BEE6BE;
+                background: #BEE6BE;
+                text-decoration: none;
+                outline: solid 1px #BEE6BE;
             }
+
         </style>
         <script>
             // You can either place your data here, or inside a file named `data.js` next to `index.html`.
             window.DATA = {
-                // wiki: 'https://shadowgambit.fandom.com/wiki',
+                wiki: 'https://shadowgambit.fandom.com/wiki',
                 list: [
                     {
                         text1: 'Hello',
                         text2: 'World!',
+                        title: 'Twin Peaks'
                     },
                     {
                         text1: 'Hello\nfoo',
-                        text2: 'World!\nbar',
+                        text2: 'World!\nbar'
                     },
                     {
                         text1: 'Hello',
-                        text2: 'Hllo!',
+                        text2: 'Hllo!'
                     },
                     {
                         text1: 'Hello',
-                        text2: 'Hello',
+                        text2: 'Hello'
                     },
                     {
                         text1: 'Lorem ipsum',
-                        text2: 'Lxxem dolor ipm',
-                    },
-                ],
+                        text2: 'Lxxem dolor ipm'
+                    }
+                ]
             };
         </script>
     </head>
